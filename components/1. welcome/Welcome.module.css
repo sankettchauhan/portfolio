@@ -1,0 +1,103 @@
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.particles {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 100%;
+}
+.blur {
+  height: 100%;
+  width: 100%;
+  background: #ddd;
+  filter: blur(10px);
+  position: absolute;
+  opacity: 0.1;
+}
+.content {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.imgBox {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.img {
+  height: 150px;
+  border-radius: 50%;
+}
+.intro {
+  font-size: 1.5em;
+  color: white;
+  font-weight: 100;
+  line-height: 1.2;
+  height: 116px;
+}
+.skills {
+  font-size: 1.2em;
+  color: white;
+  font-weight: 300;
+  font-style: italic;
+  height: 28px;
+  margin-top: 0.5em;
+}
+.scroll {
+  color: white;
+  font-weight: 100;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .welcome {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    padding: 0 0.5em;
+  }
+  .intro {
+    font-size: 1.2em;
+  }
+  .skills {
+    margin-top: 0.2em;
+  }
+  .scroll {
+    width: 100%;
+    text-align: center;
+    bottom: 70px;
+  }
+}

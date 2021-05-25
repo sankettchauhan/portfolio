@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900");
+
+.card {
+  position: relative;
+  width: 300px;
+  /* height: 400px; */
+  background: #fff;
+  transition: 0.5s;
+  cursor: default;
+}
+/* .card:hover {
+  transform: translateY(-40px);
+} */
+.card:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #ebba38;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+.card:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 15px;
+  height: 200px;
+  background: #ddaf34;
+  border-bottom: 150px solid #d9d9d9;
+  transform-origin: left;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+.card .imgbx {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #ffc93c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .imgbx img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.card .imgbx h3 {
+  position: relative;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.card .content {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  background: #fff;
+  color: #777;
+  text-align: center;
+}
+.card .content:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1));
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: -1;
+}
+/* .card:hover .content:before {
+  transform: translateY(40px) skewX(45deg);
+  filter: blur(5px);
+  opacity: 0.5;
+} */
+@media (max-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    margin-left: 1em;
+    position: relative;
+  }
+  .card:before {
+    content: none;
+  }
+  .card:after {
+    content: none;
+  }
+  .marginRight {
+    margin-right: 1em;
+  }
+}

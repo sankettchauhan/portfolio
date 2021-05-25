@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900");
+
+.bodyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 0;
+  background: rgb(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 1050px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* transform: skewY(-10deg); */
+}
+
+.zIndex1 {
+  z-index: 1;
+}
+.zIndex2 {
+  z-index: 2;
+}
+.zIndex3 {
+  z-index: 3;
+}
+@media (max-width: 600px) {
+  .bodyContainer {
+    display: flex;
+    overflow-x: scroll;
+    height: 350px;
+  }
+  .container {
+    /* justify-content: center; */
+    display: flex;
+    overflow-x: scroll;
+    height: 350px;
+    flex-wrap: nowrap;
+  }
+}
