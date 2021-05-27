@@ -1,0 +1,30 @@
+.footer {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+}
+.iconContainer {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  margin: 3em 0;
+}
+.icon {
+  padding: 0.5em;
+  border-radius: 100%;
+  border: 2px solid white;
+  height: 47px;
+  width: 47px;
+  display: grid;
+  place-items: center;
+  transition: 0.3s ease-out;
+  font-size: 1.1em;
+}
+.icon:hover {
+  background-color: white;
+  color: black;
+}

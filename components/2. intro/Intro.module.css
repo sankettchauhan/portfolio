@@ -1,19 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900");
 
+.introSection {
+  padding: 4em 0;
+}
+.title {
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1em;
+}
+.title::after {
+  content: "";
+  width: 5%;
+  background-color: #ffc93c;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
 .bodyContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6em 0;
-  background: rgb(0, 0, 0, 0.2);
   overflow: hidden;
 }
+
 .container {
   position: relative;
   width: 1050px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 1em;
   /* transform: skewY(-10deg); */
 }
 

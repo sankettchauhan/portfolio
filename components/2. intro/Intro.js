@@ -4,8 +4,8 @@ import Card from "./IntroCard";
 
 export default function Intro() {
   return (
-    <div className={introStyles.bg}>
-      {/* <div className={introStyles.title}>Introduction</div> */}
+    <div id="intro" className={introStyles.introSection}>
+      <div className={introStyles.title}>Introduction</div>
       <div className={introStyles.bodyContainer}>
         <div className={introStyles.container}>
           <Card

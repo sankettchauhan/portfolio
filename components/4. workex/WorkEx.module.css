@@ -1,0 +1,100 @@
+.container {
+  padding: 0 5em;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  flex-wrap: wrap;
+}
+.title {
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 2em;
+}
+.title::after {
+  content: "";
+  width: 5%;
+  background-color: #f00;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.companyContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+.imageBox {
+}
+.atg {
+  filter: invert(1);
+  transform: scale(1.5);
+}
+.imageBox img {
+  width: 180px;
+}
+@media (max-width: 600px) {
+  .title {
+    margin-top: 1.5em;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "DM Mono", monospace;
+  }
+  .container::-webkit-scrollbar {
+    width: 100px;
+    height: 100px;
+  }
+  .container::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .container::-webkit-scrollbar-track {
+    background: linear-gradient(
+      90deg,
+      #201c29,
+      #201c29 1px,
+      #17141d 0,
+      #17141d
+    );
+  }
+  .cardContainer {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    padding: 3rem;
+    padding-left: 1em;
+    overflow-x: scroll;
+  }
+
+  .companyContainer {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+  }
+  .atg {
+    filter: invert(1);
+    transform: scale(1.5);
+    margin-top: 1em;
+  }
+  .imageBox img {
+    width: 150px;
+  }
+  .reduceFont {
+    font-size: 1.3em;
+  }
+}

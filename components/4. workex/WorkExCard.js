@@ -1,14 +1,31 @@
 import styles from "./WorkExCard.module.css";
 
-export default function WorkEx() {
+export default function WorkEx({ date, title, logo, company, tech }) {
   return (
-    <div className={styles.card}>
-      <div className={`${styles.face} ${styles.front}`}>
-        <h2>Front</h2>
+    <article className={styles.card}>
+      <header className={styles.cardHeader}>
+        <p>{date}</p>
+        <h2>{title}</h2>
+      </header>
+
+      <div className={styles.cardAuthor}>
+        <div className={styles.authorAvatar} href="#">
+          <img src={`./assets/images/workex/${logo}`} />
+        </div>
+        <svg className={styles.halfCircle} viewBox="0 0 106 57">
+          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+        </svg>
+
+        <div className={styles.authorName}>
+          <div className={styles.authorNamePrefix}>Company</div>
+          {company}
+        </div>
       </div>
-      <div className={`${styles.face} ${styles.back}`}>
-        <h2>Back</h2>
+      <div className={styles.tags}>
+        {tech.map((item, index) => (
+          <span key={`tech-${index + 1}`}>{item}</span>
+        ))}
       </div>
-    </div>
+    </article>
   );
 }

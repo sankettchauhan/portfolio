@@ -103,4 +103,9 @@
   .marginRight {
     margin-right: 1em;
   }
+  .card,
+  .imgbx,
+  .content {
+    border-radius: 2em;
+  }
 }

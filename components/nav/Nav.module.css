@@ -5,4 +5,17 @@
   position: fixed;
   width: 100%;
   z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2em;
+}
+.navitem {
+  margin-left: 1em;
+}
+@media (max-width: 600px) {
+  .nav {
+    justify-content: center;
+    font-size: 0.9em;
+  }
 }

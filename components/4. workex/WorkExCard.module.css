@@ -1,49 +1,146 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 
-.bodyContainer {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #111;
-}
 .card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  transform-style: preserve-3d;
-}
-.card .face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transition: 2s ease-in-out;
+  font-family: "DM Mono", monospace;
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #17141d;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  transition: 0.2s;
+  box-shadow: 0 0 3rem #000;
+  margin: 0;
+  position: relative;
+  color: white;
+  cursor: default;
+  margin-top: 2.5em;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+.cardHeader p {
+  font-size: 14px;
+  margin: 0 0 1rem;
+  color: #7a7a8c;
+}
+
+.cardHeader h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: default;
+}
+
+.card:hover h2 {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.cardAuthor {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 75px 1fr;
   align-items: center;
-  transform: perspective(500px) rotateY(0deg);
+  position: relative;
 }
-.card .face.front {
-  background: #ff0;
+
+.authorAvatar {
+  grid-area: auto;
+  align-self: start;
+  position: relative;
+  box-sizing: border-box;
 }
-.card:hover .face.front {
-  transform: perspective(500px) rotateY(180deg);
+
+.authorAvatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  margin: 16px 10px;
+  cursor: default;
 }
-.card .face.back {
-  background: #3bc2ff;
-  color: #fff;
-  transform: perspective(500px) rotateY(180deg);
+
+.authorName {
+  grid-area: auto;
+  box-sizing: border-box;
 }
-.card:hover .face.back {
-  transform: perspective(500px) rotateY(360deg);
+
+.authorNamePrefix {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
 }
-.card .face h2 {
-  font-size: 4em;
-  transform: perspective(500px) translateZ(50px);
+
+.halfCircle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #ff8a00;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.tags {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #7a7a8c;
   text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+  cursor: default;
+}
+
+.card:hover .tags span {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 600px) {
+  .card {
+    box-shadow: -1rem 0 3rem #000;
+  }
+  .card:not(:first-child) {
+    margin-left: -130px;
+  }
+  .card:last-child {
+    width: 600px;
+  }
+
+  .card:focus-within ~ .card,
+  .card:hover ~ .card {
+    transform: translateX(130px);
+  }
+  .card {
+    margin-top: 1em;
+  }
 }
