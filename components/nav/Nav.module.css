@@ -1,4 +1,5 @@
-.nav {
+.nav,
+.contactnav {
   height: 40px;
   color: white;
   background: black;
@@ -10,8 +11,17 @@
   align-items: center;
   padding: 2em;
 }
+.contactnav {
+  justify-content: flex-start;
+}
 .navitem {
   margin-left: 1em;
+}
+.home {
+  justify-self: flex-start;
+}
+.icon {
+  color: white;
 }
 @media (max-width: 600px) {
   .nav {

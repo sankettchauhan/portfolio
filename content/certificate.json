@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Front-End Web Development with React",
+    "link": "https://coursera.org/share/03719f9de420979ee693c2102aedd932",
+    "image": "/assets/images/certificate/react.jpeg"
+  },
+  {
+    "title": "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+    "link": "https://coursera.org/share/03719f9de420979ee693c2102aedd932",
+    "image": "/assets/images/certificate/bootstrap.jpeg"
+  },
+  {
+    "title": "Software Developer Intern",
+    "link": "https://drive.google.com/file/d/1tBQbkpUrVhuwKmbcS-7FbLeZTkCAbEUD/view?usp=sharing",
+    "image": "/assets/images/certificate/sdi.jpeg"
+  },
+  {
+    "title": "Front End Libraries",
+    "link": "https://www.freecodecamp.org/certification/sankettchauhan/front-end-libraries",
+    "image": "/assets/images/certificate/frontendlibraries.jpeg"
+  },
+  {
+    "title": "Intro to Wordpress",
+    "link": "https://drive.google.com/file/d/1gYq6j3fsqDQSpHaRiWOiHgnnSNlgMfso/view?usp=sharing",
+    "image": "/assets/images/certificate/wordpress.jpeg"
+  },
+  {
+    "title": "Research Paper - Soil Health Monitoring System",
+    "link": "https://www.ijraset.com/print-certificate.php?member=28655",
+    "image": "/assets/images/certificate/research.jpeg"
+  },
+  {
+    "title": "Javascript Algorithms and Data Structure",
+    "link": "https://www.freecodecamp.org/certification/sankettchauhan/javascript-algorithms-and-data-structures",
+    "image": "/assets/images/certificate/dsa.jpeg"
+  },
+  {
+    "title": "PHP Fundamentals",
+    "link": "https://drive.google.com/file/d/1Fk9ZuAnKNirB4svD4UgCBLQZDWQXauAa/view?usp=sharing",
+    "image": "/assets/images/certificate/php.jpeg"
+  },
+  {
+    "title": "Responsive Web Design",
+    "link": "https://www.freecodecamp.org/certification/sankettchauhan/responsive-web-design",
+    "image": "/assets/images/certificate/responsive.jpeg"
+  },
+  {
+    "title": "Tech Savvy Contest'19 - 1st Runner-up",
+    "link": "https://drive.google.com/file/d/1K76Me7ZA4EHw2EdWPUl0h31iVghnxdJ0/view?usp=sharing",
+    "image": "/assets/images/certificate/techsavvy.jpeg"
+  },
+  {
+    "title": "Campus Ambassador - Robothlon, IIT Delhi",
+    "link": "https://drive.google.com/file/d/1IFx4bWSa3_-CtSRKXWToTkOoIm4dwwru/view?usp=sharing",
+    "image": "/assets/images/certificate/campus.jpeg"
+  },
+  {
+    "title": "Certificate of Excellence - Techblocks 5.2",
+    "link": "https://drive.google.com/file/d/1NCxtlcay33Zo2szj_EATaQaphuQaI0_X/view?usp=sharing",
+    "image": "/assets/images/certificate/teaching.jpeg"
+  },
+  {
+    "title": "Certificate of Excellence - Techblocks 5.1",
+    "link": "https://drive.google.com/file/d/1HIaDW4vOU6Losras-3Hb65x4xjQJurAc/view?usp=sharing",
+    "image": "/assets/images/certificate/teaching-2.jpeg"
+  },
+  {
+    "title": "OC -The Joust (Literary society of JIIT)",
+    "link": "https://drive.google.com/file/d/1SUcpQOpDPWV6pnppdF-DoUHF29BOs9tR/view?usp=sharing",
+    "image": "/assets/images/certificate/oc.jpeg"
+  },
+  {
+    "title": "Java Training",
+    "link": "https://drive.google.com/file/d/1pVUGHCBZyMvgRxMMeO3QeU4OGk0HeNQ2/view?usp=sharing",
+    "image": "/assets/images/certificate/java.jpeg"
+  },
+  {
+    "title": "Python Training",
+    "link": "https://drive.google.com/file/d/1dftbBURRm458f91B-Qc66lcA9dHkjzbJ/view?usp=sharing",
+    "image": "/assets/images/certificate/python.jpeg"
+  }
+]

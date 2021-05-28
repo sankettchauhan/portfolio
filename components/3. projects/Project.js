@@ -5,7 +5,10 @@ import PROJECTS from "../../content/projects.json";
 export default function Projects() {
   return (
     <div id="projects" className={styles.container}>
-      <div className={styles.title}>Projects</div>
+      <div className={styles.title}>
+        Projects
+        <div className="scroll">Click to know more!</div>
+      </div>
       <div className={styles.cardContainer}>
         {PROJECTS.map((item, index) => (
           <ProjectCard key={`Project-card-${index + 1}`} {...item} />
