@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Landing Page",
+    "image": "/assets/images/project/laptop.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "http://subzcribe.in/"
+  },
+  {
+    "title": "The Cocktail DB",
+    "image": "/assets/images/project/cocktail.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://the-cocktail-db.vercel.app/"
+  },
+  {
+    "title": "E Commerce",
+    "image": "/assets/images/project/shopping.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://vedworld.org/"
+  }
+]

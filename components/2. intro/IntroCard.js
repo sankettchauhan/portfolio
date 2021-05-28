@@ -23,7 +23,7 @@ export default function IntroCard({
             style={{
               filter: imageRevert ? "invert(1)" : "none",
             }}
-            src={"./assets/images/intro/" + img + ".png"}
+            src={img}
           />
           <h3>{title}</h3>
         </div>

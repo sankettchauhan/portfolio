@@ -1,6 +1,6 @@
 import styles from "./WorkExCard.module.css";
 
-export default function WorkEx({ date, title, logo, company, tech }) {
+export default function WorkEx({ date, title, logo, company, technologies }) {
   return (
     <article className={styles.card}>
       <header className={styles.cardHeader}>
@@ -10,7 +10,7 @@ export default function WorkEx({ date, title, logo, company, tech }) {
 
       <div className={styles.cardAuthor}>
         <div className={styles.authorAvatar} href="#">
-          <img src={`./assets/images/workex/${logo}`} />
+          <img src={logo} />
         </div>
         <svg className={styles.halfCircle} viewBox="0 0 106 57">
           <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -22,8 +22,8 @@ export default function WorkEx({ date, title, logo, company, tech }) {
         </div>
       </div>
       <div className={styles.tags}>
-        {tech.map((item, index) => (
-          <span key={`tech-${index + 1}`}>{item}</span>
+        {technologies.map((item, index) => (
+          <span key={`Tech-${index + 1}`}>{item}</span>
         ))}
       </div>
     </article>

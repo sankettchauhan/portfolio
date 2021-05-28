@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Full stack Developer",
+    "company": "Subzclick Pvt. Ltd.",
+    "date": "Sept 2020 - May 2021",
+    "description": [
+      "Developed a user friendly landing page on Bootstrap within a time boundation of 5 days (http://subzcribe.in/)",
+      "Built JavaScript based browser extension which verified the user with an OTP.",
+      "Designed and developed react based web app for a client.",
+      "Contributed in building an API for web and mobile app."
+    ],
+    "technologies": ["React", "Node", "MongoDB"],
+    "logo": "/assets/images/workex/subzcribe-logo.png"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Ved World Pvt. Ltd.",
+    "date": "June - Sept 2020",
+    "description": [
+      "Designed and developed entire frontend of an e-commerce platform.",
+      "Integrated payment gateway (razorpay) and delivery service (delhivery)."
+    ],
+    "technologies": ["React", "Reactstrap", "CSS"],
+    "logo": "/assets/images/workex/vedworld-logo.jpeg"
+  },
+  {
+    "title": "Software Developer",
+    "company": "Across The Globe",
+    "date": "Jan - June 2020",
+    "description": [
+      "Developed an extension for LinkedIn and WhatsApp which automated time consuming tasks and saved a huge amount of manpower."
+    ],
+    "technologies": ["Extension", "jQuery"],
+    "logo": "/assets/images/workex/atg-logo.jpeg"
+  }
+]

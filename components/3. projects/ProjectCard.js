@@ -1,11 +1,11 @@
 import styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({ title, image, description, link, href }) {
+export default function ProjectCard({ title, image, description, href }) {
   return (
     <div className={styles.card}>
       <div className={styles.box}>
         <div className={styles.imgBx}>
-          <img src={`/assets/images/project/${image}`} />
+          <img src={image} />
         </div>
         <div className={styles.content}>
           <div>

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Full-stack Developer",
+    "languages": "React.js, Node.js, Express",
+    "zindex": 3,
+    "img": "./assets/images/intro/code.png"
+  },
+  {
+    "title": "App Developer",
+    "zindex": 2,
+    "languages": "React Native",
+    "img": "./assets/images/intro/mobile.png",
+    "imageRevert": true
+  },
+  {
+    "title": "Browser Extension Developer",
+    "zindex": 1,
+    "languages": "Javascript, jQuery, Ajax",
+    "img": "./assets/images/intro/launch.png",
+    "marginRight": true
+  }
+]
