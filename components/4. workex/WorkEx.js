@@ -14,8 +14,6 @@ function Company({ image }) {
 }
 
 export default function WorkEx() {
-  WORKEX.map((item) => console.log(item));
-  console.log(WORKEX);
   return (
     <div id="workex" className={styles.container}>
       <div className={styles.title}>Work Experience</div>

@@ -14,7 +14,7 @@ export default function Home() {
         <title>Portfolio</title>
       </Head>
       <section>
-        <Nav />
+        <Nav home />
         <Welcome />
         <Intro />
         <Projects />
