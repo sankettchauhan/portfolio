@@ -93,6 +93,10 @@
     transition: 0.2s;
     margin-left: 1em;
     position: relative;
+    transform: scale(0.8);
+  }
+  .card:not(:first-child){
+    margin-left: -1.5em;
   }
   .card:before {
     content: none;
@@ -107,5 +111,9 @@
   .imgbx,
   .content {
     border-radius: 2em;
+  }
+  .imgbx{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }

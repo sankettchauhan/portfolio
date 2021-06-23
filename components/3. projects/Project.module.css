@@ -31,11 +31,13 @@
   .title {
     margin-top: 0;
     margin-bottom: 1em;
+    padding-top:2.5em;
   }
   .container {
     padding: 0;
     width: 100%;
     overflow: hidden;
+    margin-bottom: -5em;
   }
   .cardContainer {
     flex-direction: column;

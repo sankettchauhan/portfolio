@@ -90,6 +90,10 @@
   }
 }
 @media (max-width: 600px) {
+  /* to fix scroll cut by the nav bar */
+  .container{
+    margin-bottom: -5em;
+  }
   .welcome {
     width: 100%;
   }
