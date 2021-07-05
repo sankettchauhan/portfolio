@@ -18,9 +18,41 @@
   cursor: default;
   margin-top: 2.5em;
 }
+.card:nth-child(1) {
+  z-index: 3;
+}
+.card:nth-child(2) {
+  z-index: 2;
+}
+.card:nth-child(3) {
+  z-index: 1;
+}
+.card::after {
+  position: absolute;
+  transform: rotate(90deg);
+  right: -65px;
+  top: 50%;
+}
+.card:nth-child(1)::after {
+  content: "Subzclick Pvt. Ltd.";
+}
+.card:nth-child(2)::after {
+  content: "Ved World Pvt. Ltd.";
+}
+.card:nth-child(3)::after {
+  content: "Across the Globe";
+}
+
+.content {
+  visibility: hidden;
+}
 
 .card:hover {
   transform: translateY(-1rem);
+  z-index: 10;
+}
+.card:hover .content {
+  visibility: visible;
 }
 .cardHeader p {
   font-size: 14px;
@@ -129,17 +161,20 @@
   .card {
     box-shadow: -1rem 0 3rem #000;
   }
+  .card:first-child {
+    margin-left: 2em;
+  }
   .card:not(:first-child) {
     margin-left: -130px;
   }
   .card:last-child {
-    width: 600px;
+    /* width: 600px; */
   }
 
-  .card:focus-within ~ .card,
+  /* .card:focus-within ~ .card,
   .card:hover ~ .card {
     transform: translateX(130px);
-  }
+  } */
   .card {
     margin-top: 1em;
   }
