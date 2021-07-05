@@ -2,13 +2,15 @@ import styles from "./Welcome.module.css";
 import ReactTyped from "react-typed";
 import Particles from "react-particles-js";
 import config from "./particles-config.json";
+import CONTENT from "../../content/welcome.json";
 
-const SKILLS = [
-  "Fullstack Developer",
-  "App Developer",
-  "MERN Stack",
-  "Browser Extensions",
-];
+// const SKILLS = [
+//   "Fullstack Developer",
+//   "App Developer",
+//   "MERN Stack",
+//   "Browser Extensions",
+// ];
+const { desc, skills: SKILLS, image } = CONTENT;
 
 function extendArray(ar, n) {
   const b = [];
@@ -28,22 +30,17 @@ export default function Welcome() {
         {/* <div className={styles.blur}></div> */}
         <div className={styles.content}>
           <div className={styles.imgBox}>
-            <img className={styles.img} src="/assets/images/sanket.jpg" />
+            <img className={styles.img} src={image} />
           </div>
           <div className={styles.intro}>
-            <ReactTyped
-              strings={[
-                "Hi. I am Sanket, a full stack web developer. I love to code and help others put their ideas on the web.",
-              ]}
-              typeSpeed={40}
-            />
+            <ReactTyped strings={[desc]} typeSpeed={40} />
           </div>
           <div className={styles.skills}>
             <ReactTyped
               strings={extendArray(SKILLS, 100)}
               typeSpeed={40}
               backSpeed={15}
-              startDelay={6500}
+              startDelay={2000}
               showCursor={false}
               loop
             />

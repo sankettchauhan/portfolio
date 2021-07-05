@@ -12,7 +12,7 @@ export default function ProjectCard({ title, image, description, href }) {
             <div className={styles.header}>
               <h2>{title}</h2>
               <a target="_blank" href={href}>
-                Go to link
+                Click me!
               </a>
             </div>
             <p>{description}</p>

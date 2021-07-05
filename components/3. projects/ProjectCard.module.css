@@ -107,9 +107,8 @@
 }
 .content a {
   opacity: 0;
-  display: none;
   visibility: hidden;
-  transition: 0.5s;
+  transition: 1s;
   background-color: white;
   margin-left: auto;
   padding: 5px;
@@ -122,6 +121,8 @@
   opacity: 1;
   display: inline-block;
   visibility: visible;
+}
+.box:hover .content a:hover {
 }
 .header {
   display: flex;

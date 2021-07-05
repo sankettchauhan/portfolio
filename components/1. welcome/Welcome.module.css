@@ -56,7 +56,6 @@
   color: white;
   font-weight: 100;
   line-height: 1.2;
-  height: 116px;
 }
 .skills {
   font-size: 1.2em;
@@ -91,7 +90,7 @@
 }
 @media (max-width: 600px) {
   /* to fix scroll cut by the nav bar */
-  .container{
+  .container {
     margin-bottom: -5em;
   }
   .welcome {

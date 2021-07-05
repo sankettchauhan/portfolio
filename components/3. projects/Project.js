@@ -7,7 +7,7 @@ export default function Projects() {
     <div id="projects" className={styles.container}>
       <div className={styles.title}>
         Projects
-        <div className="scroll">Click to know more!</div>
+        <div className="scroll">Click to know more about my projects!</div>
       </div>
       <div className={styles.cardContainer}>
         {PROJECTS.map((item, index) => (
