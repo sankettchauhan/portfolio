@@ -1,11 +1,11 @@
 import Head from "next/head";
 
-import Welcome from "@components/1. welcome/Welcome";
-import Intro from "@components/2. intro/Intro";
-import Nav from "@components/nav/Nav";
-import WorkEx from "@components/4. workex/WorkEx";
-import Projects from "@components/3. projects/Project";
-import Footer from "@components/footer/Footer";
+import Welcome from "../components/1. welcome/Welcome";
+import Intro from "../components/2. intro/Intro";
+import Nav from "../components/nav/Nav";
+import WorkEx from "../components/4. workex/WorkEx";
+import Projects from "../components/3. projects/Project";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
