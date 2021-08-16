@@ -12,6 +12,7 @@
   width: 400px;
   justify-content: space-around;
   margin: 3em 0;
+  max-width: 100%;
 }
 .icon {
   padding: 0.5em;

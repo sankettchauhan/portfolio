@@ -1,6 +1,6 @@
 import styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({ title, image, href, tags }) {
+export default function ProjectCard({ title, image, href, tags, disclaimer }) {
   return (
     <div className={styles.card}>
       <div className={styles.box}>
@@ -9,6 +9,9 @@ export default function ProjectCard({ title, image, href, tags }) {
         </div>
         <a target="_blank" href={href}>
           <div className={styles.content}>
+            {disclaimer && (
+              <small className={styles.disclaimer}>{disclaimer}</small>
+            )}
             <div className={styles.header}>
               <div>
                 <h2>{title}</h2>

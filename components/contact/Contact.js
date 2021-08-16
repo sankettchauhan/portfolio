@@ -7,7 +7,7 @@ function Form() {
       action="https://usebasin.com/f/bf812690e301"
       method="post"
     >
-      <p className={styles.p} type="Name:">
+      <p className={styles.p}>
         <input
           className={styles.input}
           placeholder="Your name"
@@ -15,7 +15,7 @@ function Form() {
           name="name"
         ></input>
       </p>
-      <p className={styles.p} type="Email:">
+      <p className={styles.p}>
         <input
           type="email"
           name="email"
@@ -23,7 +23,7 @@ function Form() {
           placeholder="Your email"
         ></input>
       </p>
-      <p className={styles.p} type="Message:">
+      <p className={styles.p}>
         <textarea
           type="text"
           className={styles.input}
@@ -40,9 +40,9 @@ function Form() {
 
 export default function Contact() {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="contact">
       <div className={styles.title}>
-        Thanks for taking out the time to reach out. How can i help you today?
+        Want to contact me? Just fill out the form and I'll reach out to you!
       </div>
       <Form />
     </div>
