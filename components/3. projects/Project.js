@@ -4,7 +4,7 @@ import PROJECTS from "../../content/projects.json";
 
 export default function Projects() {
   return (
-    <div id="projects" className={styles.container}>
+    <div id="projects" className={styles.projectSection}>
       <div className={styles.title}>
         Projects
         <div className="scroll">Click to know more about my projects!</div>

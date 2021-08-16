@@ -1,6 +1,8 @@
-.container {
+.projectSection {
   padding: 0 5em;
   position: relative;
+  padding-top: 5em;
+  margin-top: -5em;
 }
 .cardContainer {
   display: flex;
@@ -31,9 +33,9 @@
   .title {
     margin-top: 0;
     margin-bottom: 1em;
-    padding-top:2.5em;
+    padding-top: 2.5em;
   }
-  .container {
+  .projectSection {
     padding: 0;
     width: 100%;
     overflow: hidden;

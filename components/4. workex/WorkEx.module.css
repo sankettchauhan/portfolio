@@ -1,5 +1,7 @@
 .container {
   padding: 0 5em;
+  padding-top: 4em;
+  margin-top: -4em;
 }
 .cardContainer {
   display: flex;
@@ -44,7 +46,7 @@
 @media (max-width: 600px) {
   .title {
     margin-top: 1.5em;
-    padding-top:2.5em;
+    padding-top: 2.5em;
   }
   .container {
     padding: 0;
