@@ -1,20 +1,46 @@
 [
   {
-    "title": "Landing Page",
-    "image": "/assets/images/project/laptop.jpeg",
+    "title": "Subzcribe Landing Page",
+    "image": "/assets/images/project/subzcribe.jpeg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "href": "http://subzcribe.in/"
+    "href": "http://subzcribe.in/",
+    "tags": ["bootstrap", "css", "ui"]
   },
   {
     "title": "The Cocktail DB",
     "image": "/assets/images/project/cocktail.jpeg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "href": "https://the-cocktail-db.vercel.app/"
+    "href": "https://the-cocktail-db.vercel.app/",
+    "tags": ["react", "css", "axios"]
   },
   {
-    "title": "E Commerce",
-    "image": "/assets/images/project/shopping.jpeg",
+    "title": "Ved World Org - E Commerce Site",
+    "image": "/assets/images/project/vedworld.jpeg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "href": "https://vedworld.org/"
+    "href": "https://vedworld.org/",
+    "tags": ["react", "react-bootstrap", "ui development"]
+  },
+  {
+    "title": "Knowledge Base - Blogging site",
+    "image": "/assets/images/project/nodekb.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://article-nodekb.herokuapp.com/",
+    "tags": ["node", "express", "pug", "mongodb"]
+  },
+  {
+    "title": "Mario",
+    "image": "/assets/images/project/mario.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://Mario.sankettchauhan.repl.co",
+    "tags": ["kaboomjs", "javascript", "html/css"],
+    "disclaimer": "Currently playable only on desktop"
+  },
+  {
+    "title": "Zelda",
+    "image": "/assets/images/project/zelda.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://Zelda.sankettchauhan.repl.co",
+    "tags": ["kaboomjs", "javascript", "html/css"],
+    "disclaimer": "Currently playable only on desktop"
   }
 ]

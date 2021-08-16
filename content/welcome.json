@@ -2,9 +2,9 @@
   "desc": "Hi. I am Sanket.",
   "oldDesc": "Hi. I am Sanket, a full stack web developer. I love to code and help others put their ideas on the web.",
   "skills": [
-    "Fullstack Developer",
-    "App Developer",
     "MERN Stack",
+    "App Developer",
+    "Fullstack Developer",
     "Browser Extensions"
   ],
   "image": "/assets/images/sanket.jpg"

@@ -1,23 +1,28 @@
 import styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({ title, image, description, href }) {
+export default function ProjectCard({ title, image, href, tags }) {
   return (
     <div className={styles.card}>
       <div className={styles.box}>
         <div className={styles.imgBx}>
           <img src={image} />
         </div>
-        <div className={styles.content}>
-          <div>
+        <a target="_blank" href={href}>
+          <div className={styles.content}>
             <div className={styles.header}>
-              <h2>{title}</h2>
-              <a target="_blank" href={href}>
-                Click me!
-              </a>
+              <div>
+                <h2>{title}</h2>
+              </div>
+              <div className={styles.tagsContainer}>
+                {tags.map((tag, index) => (
+                  <span key={tag} className={styles.tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <p>{description}</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );
