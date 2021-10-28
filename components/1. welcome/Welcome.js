@@ -41,7 +41,6 @@ export default function Welcome() {
               typeSpeed={40}
               backSpeed={15}
               startDelay={2000}
-              showCursor={false}
               loop
             />
           </div>

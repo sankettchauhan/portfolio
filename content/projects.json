@@ -1,5 +1,26 @@
 [
   {
+    "title": "Tropius - manage movie rentals",
+    "image": "/assets/images/project/tropius.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://tropius-frontend.vercel.app/",
+    "tags": ["react", "node", "mongodb", "material-ui"]
+  },
+  {
+    "title": "Image search using Pixabay API",
+    "image": "/assets/images/project/pixabay.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://image-search-using-pixabay-api.vercel.app/",
+    "tags": ["react", "material-ui", "pixabay api"]
+  },
+  {
+    "title": "React superchat app",
+    "image": "/assets/images/project/react-superchat.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://superchat-using-react-firebase.vercel.app/",
+    "tags": ["react", "firebase", "material-ui"]
+  },
+  {
     "title": "Subzcribe Landing Page",
     "image": "/assets/images/project/subzcribe.jpeg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

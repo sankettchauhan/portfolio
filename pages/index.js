@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
+        <title>Sanket Chauhan portfolio</title>
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <section>
         <Nav home />
