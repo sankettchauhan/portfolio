@@ -29,7 +29,7 @@ export default function Home() {
           content="Sanket Chauhan | Front End Web Developer"
         />
         <meta property="og:description" content="Self taught Web Developer" />
-        <meta property="og:image" content="./assets/images/sanket.jpg" />
+        <meta property="og:image" content="./assets/images/sanket.webp" />
         <meta property="og:url" content="https://sanketchauhan.me/" />
         <meta property="og:type" content="website" />
 
