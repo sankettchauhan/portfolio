@@ -12,7 +12,41 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sanket Chauhan portfolio</title>
+        <title>Sanket Chauhan - Front End Web Developer Portfolio</title>
+        {/* Search Engine */}
+        <meta
+          name="description"
+          content="Web developer. I am a self taught web developer who writes optimized code for responsive websites. Javascript. React.js. Node.js. Django. Python. And counting. "
+        />
+        <meta
+          name="keywords"
+          content="portfolio,, developer, sanket, chauhan, reactjs, javascript, web, nodejs, django"
+        />
+
+        {/* OG - Open Graph Protocol */}
+        <meta
+          property="og:title"
+          content="Sanket Chauhan | Front End Web Developer"
+        />
+        <meta property="og:description" content="Self taught Web Developer" />
+        <meta property="og:image" content="./assets/images/sanket.jpg" />
+        <meta property="og:url" content="https://sanketchauhan.me/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="website" />
+        <meta
+          name="twitter:title"
+          content="Sanket Chauhan - Front End Web Developer"
+        />
+        <meta name="twitter:description" content="Self taught Web Developer" />
+        <meta
+          name="twitter:image"
+          content="./assets/images/sankettwitter:creator.jpg"
+        />
+        <meta name="twitter:creator" content="chauhan4_sanket" />
+
+        <meta name="author" content="Sanket Chauhan" />
         <link rel="icon" href="favicon.ico" />
       </Head>
       <section>
