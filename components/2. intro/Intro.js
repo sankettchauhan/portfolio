@@ -1,6 +1,5 @@
 import introStyles from "./Intro.module.css";
 import Card from "./IntroCard";
-// import Img from "../../public/assets/images/welcome/code.png";
 import INTRO from "../../content/intro.json";
 
 export default function Intro() {

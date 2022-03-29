@@ -10,7 +10,7 @@
       "Contributed in building an API for web and mobile app."
     ],
     "technologies": ["React", "Node", "MongoDB"],
-    "logo": "/assets/images/workex/subzcribe-logo.png"
+    "logo": "/assets/images/workex/subzcribe-logo.webp"
   },
   {
     "title": "Frontend Developer",
@@ -21,7 +21,7 @@
       "Integrated payment gateway (razorpay) and delivery service (delhivery)."
     ],
     "technologies": ["React", "Reactstrap", "CSS"],
-    "logo": "/assets/images/workex/vedworld-logo.jpeg"
+    "logo": "/assets/images/workex/vedworld-logo.webp"
   },
   {
     "title": "Software Developer",
@@ -31,6 +31,6 @@
       "Developed an extension for LinkedIn and WhatsApp which automated time consuming tasks and saved a huge amount of manpower."
     ],
     "technologies": ["Extension", "jQuery"],
-    "logo": "/assets/images/workex/atg-logo.jpeg"
+    "logo": "/assets/images/workex/atg-logo.webp"
   }
 ]

@@ -3,20 +3,20 @@
     "title": "Full-stack Developer",
     "languages": "React.js, Node.js, Express",
     "zindex": 3,
-    "img": "./assets/images/intro/code.png"
+    "img": "./assets/images/intro/code.webp"
   },
   {
     "title": "App Developer",
     "zindex": 2,
     "languages": "React Native",
-    "img": "./assets/images/intro/mobile.png",
+    "img": "./assets/images/intro/mobile.webp",
     "imageRevert": true
   },
   {
     "title": "Browser Extension Developer",
     "zindex": 1,
     "languages": "Javascript, jQuery, Ajax",
-    "img": "./assets/images/intro/launch.png",
+    "img": "./assets/images/intro/launch.webp",
     "marginRight": true
   }
 ]

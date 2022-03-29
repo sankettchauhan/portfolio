@@ -6,7 +6,7 @@ function Company({ image }) {
   return (
     <div className={styles.imageBox}>
       <img
-        className={image === "atg.png" ? styles.atg : null}
+        className={image === "atg.webp" ? styles.atg : null}
         src={"./assets/images/workex/" + image}
       />
     </div>
@@ -27,9 +27,9 @@ export default function WorkEx() {
           I am proud to have collaborated with
         </div>
         <div className={styles.companyContainer}>
-          <Company image={"subzcribe.png"} />
-          <Company image={"vedworld.png"} />
-          <Company image={"atg.png"} />
+          <Company image={"subzcribe.webp"} />
+          <Company image={"vedworld.webp"} />
+          <Company image={"atg.webp"} />
         </div>
       </div>
     </div>

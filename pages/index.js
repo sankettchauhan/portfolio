@@ -40,10 +40,7 @@ export default function Home() {
           content="Sanket Chauhan - Front End Web Developer"
         />
         <meta name="twitter:description" content="Self taught Web Developer" />
-        <meta
-          name="twitter:image"
-          content="./assets/images/sankettwitter:creator.jpg"
-        />
+        <meta name="twitter:image" content="./assets/images/sanket.webp" />
         <meta name="twitter:creator" content="chauhan4_sanket" />
 
         <meta name="author" content="Sanket Chauhan" />

@@ -1,56 +1,56 @@
 [
   {
     "title": "Tropius - manage movie rentals",
-    "image": "/assets/images/project/tropius.jpeg",
+    "image": "/assets/images/project/tropius.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://tropius-frontend.vercel.app/",
     "tags": ["react", "node", "mongodb", "material-ui"]
   },
   {
     "title": "Image search using Pixabay API",
-    "image": "/assets/images/project/pixabay.jpeg",
+    "image": "/assets/images/project/pixabay.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://image-search-using-pixabay-api.vercel.app/",
     "tags": ["react", "material-ui", "pixabay api"]
   },
   {
     "title": "React superchat app",
-    "image": "/assets/images/project/react-superchat.jpeg",
+    "image": "/assets/images/project/react-superchat.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://superchat-using-react-firebase.vercel.app/",
     "tags": ["react", "firebase", "material-ui"]
   },
   {
     "title": "Subzcribe Landing Page",
-    "image": "/assets/images/project/subzcribe.jpeg",
+    "image": "/assets/images/project/subzcribe.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "http://subzcribe.in/",
     "tags": ["bootstrap", "css", "ui"]
   },
   {
     "title": "The Cocktail DB",
-    "image": "/assets/images/project/cocktail.jpeg",
+    "image": "/assets/images/project/cocktail.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://the-cocktail-db.vercel.app/",
     "tags": ["react", "css", "axios"]
   },
   {
     "title": "Ved World Org - E Commerce Site",
-    "image": "/assets/images/project/vedworld.jpeg",
+    "image": "/assets/images/project/vedworld.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://vedworld.org/",
     "tags": ["react", "react-bootstrap", "ui development"]
   },
   {
     "title": "Knowledge Base - Blogging site",
-    "image": "/assets/images/project/nodekb.jpeg",
+    "image": "/assets/images/project/nodekb.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://article-nodekb.herokuapp.com/",
     "tags": ["node", "express", "pug", "mongodb"]
   },
   {
     "title": "Mario",
-    "image": "/assets/images/project/mario.jpeg",
+    "image": "/assets/images/project/mario.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://Mario.sankettchauhan.repl.co",
     "tags": ["kaboomjs", "javascript", "html/css"],
@@ -58,7 +58,7 @@
   },
   {
     "title": "Zelda",
-    "image": "/assets/images/project/zelda.jpeg",
+    "image": "/assets/images/project/zelda.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://Zelda.sankettchauhan.repl.co",
     "tags": ["kaboomjs", "javascript", "html/css"],
