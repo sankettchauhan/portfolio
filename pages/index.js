@@ -40,10 +40,12 @@ export default function Home() {
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="sanketchauhan.me" />
+        <meta property="twitter:url" content="https://sanketchauhan.me/" />
         <meta
           name="twitter:title"
-          content="Sanket Chauhan - Front End Web Developer"
+          content="Sanket Chauhan | Front End Web Developer"
         />
         <meta
           name="twitter:description"
