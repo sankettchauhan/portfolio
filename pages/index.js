@@ -28,7 +28,10 @@ export default function Home() {
           property="og:title"
           content="Sanket Chauhan | Front End Web Developer"
         />
-        <meta property="og:description" content="Self taught Web Developer" />
+        <meta
+          property="og:description"
+          content="I am a self taught web developer who writes optimized code for responsive websites. Javascript. React.js. Node.js. Django. Python. And counting."
+        />
         <meta property="og:image" content="./assets/images/sanket.webp" />
         <meta property="og:url" content="https://sanketchauhan.me/" />
         <meta property="og:type" content="website" />
@@ -39,7 +42,10 @@ export default function Home() {
           name="twitter:title"
           content="Sanket Chauhan - Front End Web Developer"
         />
-        <meta name="twitter:description" content="Self taught Web Developer" />
+        <meta
+          name="twitter:description"
+          content="I am a self taught web developer who writes optimized code for responsive websites. Javascript. React.js. Node.js. Django. Python. And counting."
+        />
         <meta name="twitter:image" content="./assets/images/sanket.webp" />
         <meta name="twitter:creator" content="chauhan4_sanket" />
 
