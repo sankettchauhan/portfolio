@@ -32,7 +32,10 @@ export default function Home() {
           property="og:description"
           content="I am a self taught web developer who writes optimized code for responsive websites. Javascript. React.js. Node.js. Django. Python. And counting."
         />
-        <meta property="og:image" content="./assets/images/sanket.webp" />
+        <meta
+          property="og:image"
+          content="https://sanketchauhan.me/assets/images/sanket.jpg"
+        />
         <meta property="og:url" content="https://sanketchauhan.me/" />
         <meta property="og:type" content="website" />
 
@@ -50,6 +53,7 @@ export default function Home() {
         <meta name="twitter:creator" content="chauhan4_sanket" />
 
         <meta name="author" content="Sanket Chauhan" />
+        <link href="https://sanketchauhan.me/" rel="canonical" />
         <link rel="icon" href="favicon.ico" />
       </Head>
       <section>
