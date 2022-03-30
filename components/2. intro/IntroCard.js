@@ -21,9 +21,10 @@ export default function IntroCard({
       >
         <div className={styles.imgbx}>
           <Image
+            height={100}
+            width={100}
             className={imageRevert && styles["filter-invert"]}
             src={img}
-            layout="fill"
           />
           <h3>{title}</h3>
         </div>
