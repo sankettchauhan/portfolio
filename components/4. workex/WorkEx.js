@@ -1,13 +1,16 @@
+import Image from "next/image";
 import Card from "./WorkExCard";
 import styles from "./WorkEx.module.css";
 import WORKEX from "../../content/workex.json";
 
-function Company({ image }) {
+function Company({ company }) {
   return (
     <div className={styles.imageBox}>
-      <img
-        className={image === "atg.webp" ? styles.atg : null}
-        src={"./assets/images/workex/" + image}
+      <Image
+        width={180}
+        height={100}
+        className={styles[company]}
+        src={`/assets/images/workex/${company}.webp`}
       />
     </div>
   );
@@ -27,9 +30,9 @@ export default function WorkEx() {
           I am proud to have collaborated with
         </div>
         <div className={styles.companyContainer}>
-          <Company image={"subzcribe.webp"} />
-          <Company image={"vedworld.webp"} />
-          <Company image={"atg.webp"} />
+          <Company company={"subzcribe"} />
+          <Company company={"vedworld"} />
+          <Company company={"atg"} />
         </div>
       </div>
     </div>

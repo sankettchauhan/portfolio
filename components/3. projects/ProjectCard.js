@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ title, image, href, tags, disclaimer }) {
@@ -5,7 +6,7 @@ export default function ProjectCard({ title, image, href, tags, disclaimer }) {
     <div className={styles.card}>
       <div className={styles.box}>
         <div className={styles.imgBx}>
-          <img src={image} />
+          <Image src={image} height={250} width={400} />
         </div>
         <a target="_blank" href={href}>
           <div className={styles.content}>

@@ -1,6 +1,7 @@
-import styles from "./Welcome.module.css";
 import ReactTyped from "react-typed";
 import Particles from "react-particles-js";
+import Image from "next/image";
+import styles from "./Welcome.module.css";
 import config from "./particles-config.json";
 import CONTENT from "../../content/welcome.json";
 
@@ -30,7 +31,12 @@ export default function Welcome() {
         {/* <div className={styles.blur}></div> */}
         <div className={styles.content}>
           <div className={styles.imgBox}>
-            <img className={styles.img} src={image} />
+            <Image
+              className={styles.img}
+              src={image}
+              height={150}
+              width={150}
+            />
           </div>
           <div className={styles.intro}>
             <ReactTyped strings={[desc]} typeSpeed={40} />

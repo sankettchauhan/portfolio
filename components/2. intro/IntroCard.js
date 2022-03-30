@@ -1,4 +1,5 @@
 import styles from "./IntroCard.module.css";
+import Image from "next/image";
 
 export default function IntroCard({
   title,
@@ -19,11 +20,10 @@ export default function IntroCard({
         }}
       >
         <div className={styles.imgbx}>
-          <img
-            style={{
-              filter: imageRevert ? "invert(1)" : "none",
-            }}
+          <Image
+            className={imageRevert && styles["filter-invert"]}
             src={img}
+            layout="fill"
           />
           <h3>{title}</h3>
         </div>
