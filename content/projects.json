@@ -14,13 +14,6 @@
     "tags": ["react", "material-ui", "pixabay api"]
   },
   {
-    "title": "React superchat app",
-    "image": "/assets/images/project/react-superchat.webp",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "href": "https://superchat-using-react-firebase.vercel.app/",
-    "tags": ["react", "firebase", "material-ui"]
-  },
-  {
     "title": "Subzcribe Landing Page",
     "image": "/assets/images/project/subzcribe.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -63,5 +56,12 @@
     "href": "https://Zelda.sankettchauhan.repl.co",
     "tags": ["kaboomjs", "javascript", "html/css"],
     "disclaimer": "Currently playable only on desktop"
+  },
+  {
+    "title": "React superchat app",
+    "image": "/assets/images/project/react-superchat.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://superchat-using-react-firebase.vercel.app/",
+    "tags": ["react", "firebase", "material-ui"]
   }
 ]

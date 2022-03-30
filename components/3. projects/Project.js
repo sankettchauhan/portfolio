@@ -3,6 +3,8 @@ import ProjectCard from "./ProjectCard";
 import PROJECTS from "../../content/projects.json";
 
 export default function Projects() {
+  // remove the react chat app project
+  PROJECTS.pop();
   return (
     <div id="projects" className={styles.projectSection}>
       <div className={styles.title}>
