@@ -4,42 +4,57 @@
     "image": "/assets/images/project/tropius.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://tropius-frontend.vercel.app/",
-    "tags": ["react", "node", "mongodb", "material-ui"]
+    "tags": ["react", "node", "mongodb", "material-ui"],
+    "hiddenTags": [
+      "react",
+      "fullstack",
+      "frontend",
+      "backend",
+      "node",
+      "express",
+      "material ui",
+      "mongodb"
+    ]
   },
   {
     "title": "Image search using Pixabay API",
     "image": "/assets/images/project/pixabay.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://image-search-using-pixabay-api.vercel.app/",
-    "tags": ["react", "material-ui", "pixabay api"]
+    "tags": ["react", "material-ui", "pixabay api"],
+    "hiddenTags": ["react", "frontend", "material ui", "api"]
   },
   {
     "title": "Subzcribe Landing Page",
     "image": "/assets/images/project/subzcribe.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "http://subzcribe.in/",
-    "tags": ["bootstrap", "css", "ui"]
+    "tags": ["bootstrap", "css", "ui"],
+    "hiddenTags": ["html", "css", "bootstrap", "design", "frontend"]
   },
   {
     "title": "The Cocktail DB",
     "image": "/assets/images/project/cocktail.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://the-cocktail-db.vercel.app/",
-    "tags": ["react", "css", "axios"]
+    "tags": ["react", "css", "axios"],
+    "hiddenTags": ["react", "api", "design", "frontend"]
   },
   {
     "title": "Ved World Org - E Commerce Site",
     "image": "/assets/images/project/vedworld.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://vedworld.org/",
-    "tags": ["react", "react-bootstrap", "ui development"]
+    "tags": ["react", "react-bootstrap", "ui development"],
+    "hiddenTags": ["react", "firebase", "design", "frontend"]
   },
   {
     "title": "Knowledge Base - Blogging site",
     "image": "/assets/images/project/nodekb.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://article-nodekb.herokuapp.com/",
-    "tags": ["node", "express", "pug", "mongodb"]
+    "tags": ["node", "express", "pug", "mongodb"],
+    "hiddenTags": ["frontend", "backend", "node", "express", "mongodb", "pug"]
   },
   {
     "title": "Mario",
@@ -47,7 +62,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://Mario.sankettchauhan.repl.co",
     "tags": ["kaboomjs", "javascript", "html/css"],
-    "disclaimer": "Currently playable only on desktop"
+    "disclaimer": "Currently playable only on desktop",
+    "hiddenTags": ["game"]
   },
   {
     "title": "Zelda",
@@ -55,13 +71,88 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://Zelda.sankettchauhan.repl.co",
     "tags": ["kaboomjs", "javascript", "html/css"],
-    "disclaimer": "Currently playable only on desktop"
+    "disclaimer": "Currently playable only on desktop",
+    "hiddenTags": ["game"]
+  },
+  {
+    "title": "medium clone",
+    "image": "/assets/images/project/major-project.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://major-project-2022.vercel.app/home",
+    "tags": ["react", "firebase", "tailwind"],
+    "hiddenTags": [
+      "react",
+      "firebase",
+      "design",
+      "frontend",
+      "fullstack",
+      "backend",
+      "design"
+    ]
+  },
+  {
+    "title": "quiz",
+    "image": "/assets/images/project/quiz.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sanket-react-quiz.vercel.app/",
+    "tags": ["react", "tailwind"],
+    "hiddenTags": ["react", "design", "frontend"]
+  },
+  {
+    "title": "rick and morty",
+    "image": "/assets/images/project/rick-and-morty.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sanket-rick-and-morty-characters.vercel.app/",
+    "tags": ["react", "tailwind"],
+    "hiddenTags": ["react", "api", "design", "frontend"]
+  },
+  {
+    "title": "icon fill hover",
+    "image": "/assets/images/project/icon-fill-hover.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sankettchauhan.github.io/CSS-Effects-Icon-Fill-Hover/",
+    "tags": ["html", "css"],
+    "hiddenTags": ["html", "css", "design", "frontend"]
+  },
+  {
+    "title": "memories",
+    "image": "/assets/images/project/memories.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sanket-memories-app.vercel.app/home",
+    "tags": ["mern stack", "tailwind"],
+    "hiddenTags": [
+      "react",
+      "node",
+      "design",
+      "frontend",
+      "backend",
+      "fullstack",
+      "express",
+      "tailwind"
+    ]
+  },
+  {
+    "title": "stacked cards",
+    "image": "/assets/images/project/stacked-cards.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sankettchauhan.github.io/CSS-Effects-Stacked-Card-List/#",
+    "tags": ["mern stack", "tailwind"],
+    "hiddenTags": ["html", "css", "design", "frontend"]
+  },
+  {
+    "title": "neon buttons",
+    "image": "/assets/images/project/neon-button.webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "href": "https://sankettchauhan.github.io/CSS-Effects-Neon-Button/",
+    "tags": ["html", "css"],
+    "hiddenTags": ["html", "css", "design", "frontend"]
   },
   {
     "title": "React superchat app",
     "image": "/assets/images/project/react-superchat.webp",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://superchat-using-react-firebase.vercel.app/",
-    "tags": ["react", "firebase", "material-ui"]
+    "tags": ["react", "firebase", "material-ui"],
+    "hiddenTags": ["react", "firebase", "design", "frontend"]
   }
 ]
