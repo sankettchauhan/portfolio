@@ -30,7 +30,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "http://subzcribe.in/",
     "tags": ["bootstrap", "css", "ui"],
-    "hiddenTags": ["html", "css", "bootstrap", "design", "frontend"]
+    "hiddenTags": ["html", "css", "bootstrap", "frontend"]
   },
   {
     "title": "The Cocktail DB",
@@ -46,7 +46,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "href": "https://vedworld.org/",
     "tags": ["react", "react-bootstrap", "ui development"],
-    "hiddenTags": ["react", "firebase", "design", "frontend"]
+    "hiddenTags": ["react", "firebase", "frontend"]
   },
   {
     "title": "Knowledge Base - Blogging site",
@@ -86,8 +86,7 @@
       "design",
       "frontend",
       "fullstack",
-      "backend",
-      "design"
+      "backend"
     ]
   },
   {
@@ -146,13 +145,5 @@
     "href": "https://sankettchauhan.github.io/CSS-Effects-Neon-Button/",
     "tags": ["html", "css"],
     "hiddenTags": ["html", "css", "design", "frontend"]
-  },
-  {
-    "title": "React superchat app",
-    "image": "/assets/images/project/react-superchat.webp",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "href": "https://superchat-using-react-firebase.vercel.app/",
-    "tags": ["react", "firebase", "material-ui"],
-    "hiddenTags": ["react", "firebase", "design", "frontend"]
   }
 ]

@@ -29,6 +29,26 @@
   transform: translateX(-50%);
   bottom: 0;
 }
+.tagContainer {
+  margin-top: 50px;
+}
+.tag {
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  padding: 10px 20px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-family: monospace;
+  background-color: #454e56;
+  color: #b2becd;
+  border-radius: 10px;
+}
+.tagActive {
+  background-color: black;
+  color: white;
+}
 @media (max-width: 600px) {
   .title {
     margin-top: 0;
