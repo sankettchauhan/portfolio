@@ -229,8 +229,122 @@ body {
   }
 }
 
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+}
+
 @utility cursor-blink {
   animation: blink 1.1s steps(1) infinite;
+}
+
+
+/* ---------- Map ---------- */
+.map-tile-light {
+  display: none;
+}
+[data-mode="light"] .map-tile-dark {
+  display: none;
+}
+[data-mode="light"] .map-tile-light {
+  display: block;
+}
+.map-tint {
+  background: var(--accent);
+  mix-blend-mode: color;
+  opacity: 0.55;
+}
+[data-mode="light"] .map-tint {
+  opacity: 0.35;
+}
+
+/* ---------- Accent duotone for photos & screenshots; full color on hover ---------- */
+/* Hovering the element, or any `.group` ancestor (e.g. a project card), reveals color. */
+.tint-media img {
+  filter: grayscale(1) contrast(1.08) brightness(0.95);
+  transition: filter 400ms ease;
+}
+.tint-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+[data-mode="light"] .tint-media::after {
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+/* Screenshots are mostly white; dim them first so dark mode gets a deep green, not neon. */
+[data-mode="dark"] .tint-media-dim img {
+  filter: grayscale(1) brightness(0.55) contrast(1.2);
+}
+.tint-media:hover img,
+.group:hover .tint-media img {
+  filter: none;
+}
+.tint-media:hover::after,
+.group:hover .tint-media::after {
+  opacity: 0;
+}
+
+/* ---------- Arcade CRT ---------- */
+.crt {
+  position: relative;
+  overflow: hidden;
+}
+.crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.28) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 55%, rgb(0 0 0 / 0.55) 100%);
+}
+
+/* ---------- Accordion (height:auto animation without JS; not "collapse", which is a Tailwind utility) ---------- */
+.accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease;
+}
+.accordion[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+.accordion > * {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ---------- Scroll reveal (progressive: no support = no animation) ---------- */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

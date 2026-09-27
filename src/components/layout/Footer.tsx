@@ -3,6 +3,7 @@ import { profile } from "@/content/profile";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons/brands";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
+import { LocalTime } from "@/components/ui/LocalTime";
 
 const links = [
   { label: "GitHub", href: profile.socials.github, Icon: GithubIcon },
@@ -20,7 +21,8 @@ export function Footer() {
           <div className="space-y-2">
             <Logo />
             <p className="text-sm text-muted">
-              {profile.role} · {profile.location.city}, {profile.location.region}
+              {profile.role} · {profile.location.city}, {profile.location.region} ·{" "}
+              <LocalTime className="font-mono text-xs" />
             </p>
           </div>
           <ul className="flex flex-wrap gap-2">

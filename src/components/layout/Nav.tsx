@@ -9,8 +9,9 @@ import { profile } from "@/content/profile";
 import { Logo } from "./Logo";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
-export function Nav() {
+export function Nav({ showWriting }: { showWriting: boolean }) {
   const [open, setOpen] = useState(false);
+  const items = navItems.filter((i) => showWriting || i.href !== "/#writing");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ export function Nav() {
         <Logo />
 
         <ul className="hidden items-center gap-1 md:flex">
-          {navItems.map((item) => (
+          {items.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
@@ -82,16 +83,14 @@ export function Nav() {
       {open && (
         <div id="mobile-menu" className="h-[calc(100dvh-4rem)] border-t border-border md:hidden">
           <ul className="flex flex-col px-4 py-4">
-            {navItems.map((item, i) => (
+            {items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className="flex items-baseline gap-3 border-b border-dashed border-border py-4 text-lg text-fg"
                 >
-                  <span className="font-mono text-xs text-accent">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                  <span className="font-mono text-xs text-accent">{"//"}</span>
                   {item.label}
                 </Link>
               </li>

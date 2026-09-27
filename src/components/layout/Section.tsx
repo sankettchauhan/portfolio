@@ -12,7 +12,7 @@ export function Section({
   title,
   description,
   action,
-  size = "content",
+  size = "wide",
   children,
 }: {
   id: string;
@@ -27,7 +27,7 @@ export function Section({
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="py-14 sm:py-20">
       <Container size={size}>
-        <header className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
+        <header className="reveal mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
           <div>
             <p className="eyebrow">
               {"// "}

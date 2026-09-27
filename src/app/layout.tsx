@@ -4,6 +4,7 @@ import { profile } from "@/content/profile";
 import { DEFAULT_MODE, DEFAULT_THEME, themeInitScript } from "@/lib/theme";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { writingEnabled } from "@/content/posts";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -72,7 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <Nav />
+        <Nav showWriting={writingEnabled()} />
         <main id="main" className="flex-1">
           {children}
         </main>

@@ -1,3 +1,5 @@
+import location from "./location.json";
+
 /**
  * Who you are. Edit this file to change the hero, metadata, footer and
  * contact details across the whole site.
@@ -11,17 +13,12 @@ export const profile = {
   experienceYears: "~5",
   tagline:
     "Full-stack engineer building internal platforms and AI tooling at Amazon. I also make small browser games for fun.",
-  location: {
-    city: "Gurugram",
-    region: "India",
-    // Used by the map tile.
-    lat: 28.4595,
-    lng: 77.0266,
-  },
+  // Edit src/content/location.json, then run `npm run maps` to redraw the map.
+  location,
   email: "sanket.chauhan4@gmail.com",
   resume: "/resume.pdf",
   siteUrl: "https://sanketchauhan.me",
-  photo: "/assets/images/sanket.webp",
+  photo: "/assets/images/sanket.jpg",
   socials: {
     github: "https://github.com/sankettchauhan",
     linkedin: "https://www.linkedin.com/in/sanket-chauhan/",
