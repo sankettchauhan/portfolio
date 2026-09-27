@@ -1,40 +1,22 @@
 /**
- * Hand-drawn 16x16 pixel-art avatar (original art), used in the hero in
- * place of a photo. Likeness cues — dark hair, glasses, beard — are fixed
- * so the character reads the same in every palette; the lenses and collar
- * use the active accent color, so it visibly "wears" whichever theme is on.
+ * Hand-drawn pixel-art avatar (original art), used in the hero in place of
+ * a photo. Likeness cues — dark hair, glasses, beard — are fixed so the
+ * character reads the same in every palette; the lenses and collar use the
+ * active accent color, so it visibly "wears" whichever theme is on.
+ *
+ * The grid itself lives in lib/avatar-grid.ts, shared with the static
+ * share-preview images (opengraph-image / twitter-image).
  */
-const GRID = [
-  "................",
-  "....########....",
-  "...##########...",
-  "..############..",
-  "..#SSSSSSSSSS#..",
-  ".#SSSSSSSSSSSS#.",
-  ".#SSSSSSSSSSSS#.",
-  ".#SGGGGGGGGGGS#.",
-  ".#SGLLGGGGLLGS#.",
-  ".#SGGGGGGGGGGS#.",
-  "..#SSSSSSSSSS#..",
-  "..#SSBBBBBBSS#..",
-  "..#BBBKKKKBBB#..",
-  "..#BBBBBBBBBB#..",
-  "...#SSSSSSSS#...",
-  "..#CCCCCCCCCC#..",
-] as const;
+import { AVATAR_FIXED_COLORS, AVATAR_GRID } from "@/lib/avatar-grid";
 
 const PALETTE: Record<string, string> = {
-  "#": "#2b1e14", // hair / outline (warm dark brown, not pure black)
-  S: "#caa07a", // skin
-  G: "#141110", // glasses frame
+  ...AVATAR_FIXED_COLORS,
   L: "var(--accent-soft)", // lenses — reflects the active theme
-  B: "#4a3a2c", // beard (visibly darker than skin, lighter than hair)
-  K: "#1c140e", // mouth
   C: "var(--accent)", // collar — reflects the active theme
 };
 
 export function AvatarSprite({ className }: { className?: string }) {
-  const size = GRID.length;
+  const size = AVATAR_GRID.length;
   return (
     <svg
       viewBox={`0 0 ${size} ${size}`}
@@ -43,7 +25,7 @@ export function AvatarSprite({ className }: { className?: string }) {
       aria-label="Pixel-art avatar of Sanket"
       className={className}
     >
-      {GRID.flatMap((row, y) =>
+      {AVATAR_GRID.flatMap((row, y) =>
         [...row].map((c, x) =>
           c === "." ? null : <rect key={`${x}-${y}`} x={x} y={y} width={1} height={1} fill={PALETTE[c]} />,
         ),
