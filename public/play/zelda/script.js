@@ -204,7 +204,14 @@ scene("game", ({ level, score }) => {
 })
 
 scene("lose", ({ score }) => {
-  add([text(score, 32), origin('center'), pos(width()/ 2, height() /2)])
+  add([text("GAME OVER", 32), origin('center'), pos(width() / 2, height() / 2 - 60), color(1, 0.35, 0.35)])
+  add([text("score " + score, 20), origin('center'), pos(width() / 2, height() / 2)])
+  const hint = add([text("press space to play again", 10), origin('center'), pos(width() / 2, height() / 2 + 60)])
+  const shownAt = time()
+// Ignore presses in the first 0.6s so the jump/kaboom that ended the run
+// doesn't instantly restart it.
+keyPress('space', () => { if (time() - shownAt > 0.6) go("game", { level: 0, score: 0 }) })
+  loop(0.5, () => { hint.hidden = !hint.hidden })
 })
 
 

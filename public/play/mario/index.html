@@ -32,6 +32,8 @@
 
 kaboom({
   ...{"fullscreen":true,"width":240,"height":240,"scale":2,"startScene":"main","version":"0.5.0","clearColor":[0,0,0,1]},
+  // Portfolio port: scale to the window so the level (~200 units tall) fills it.
+  scale: Math.max(1, Math.floor((innerHeight / 260) * 4) / 4),
   global: true,
   plugins: [ peditPlugin, asepritePlugin, kbmspritePlugin ],
 });
@@ -53,12 +55,15 @@ loadSprite("pipe-top-right-side", "sprites/pipe-top-right-side.png");
 loadSprite("question", "sprites/question.png");
 loadSprite("unboxed", "sprites/unboxed.png");
 scene("lose", (args = {}) => {
-add([
-  text(args.score),
-  origin('center'),
-  pos(width()/2, height()/2),
-  scale(10)
-])
+camPos(width() / 2, height() / 2)
+add([text("GAME OVER", 16), origin('center'), pos(width() / 2, height() / 2 - 36), color(1, 0.35, 0.35)])
+add([text("score " + (args.score ?? 0), 10), origin('center'), pos(width() / 2, height() / 2)])
+const hint = add([text("press space to play again", 6), origin('center'), pos(width() / 2, height() / 2 + 36)])
+const shownAt = time()
+// Ignore presses in the first 0.6s so the jump/kaboom that ended the run
+// doesn't instantly restart it.
+keyPress('space', () => { if (time() - shownAt > 0.6) go('main', { level: 0, score: 0 }) })
+loop(0.5, () => { hint.hidden = !hint.hidden })
 });
 scene("main", (args = {}) => {
 const MOVE_SPEED = 120
@@ -72,6 +77,7 @@ let isJumping = true
 
 
 layers(['obj', 'ui'], 'obj')
+camIgnore(['ui'])
 
 const maps = [
   [
@@ -126,14 +132,14 @@ const gameLevel = addLevel(maps[levelIndex], levelCfg)
 const scoreGlobal = args.score ?? 0
 const scoreLabel = add([
   text(scoreGlobal),
-  pos(30,6),
+  pos(8, 20),
   layer('ui'),
   {
     value: scoreGlobal,
   }
 ])
 
-add([text('level ' + parseInt(levelIndex + 1)), pos(40, 6)])
+add([text('level ' + parseInt(levelIndex + 1)), pos(8, 8), layer('ui')])
 
 function big() {
   let timer = 0
