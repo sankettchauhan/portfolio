@@ -22,7 +22,5 @@ export const profile = {
   socials: {
     github: "https://github.com/sankettchauhan",
     linkedin: "https://www.linkedin.com/in/sanket-chauhan/",
-    x: "https://x.com/chauhan4_sanket",
-    xHandle: "@chauhan4_sanket",
   },
 } as const;

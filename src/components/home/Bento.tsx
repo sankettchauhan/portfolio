@@ -63,7 +63,7 @@ export function Bento() {
           </dl>
         </Tile>
 
-        <Tile label="click me" className="min-h-44">
+        <Tile label="just for fun" className="min-h-44">
           <ClickCounter />
         </Tile>
 

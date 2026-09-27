@@ -1,6 +1,6 @@
 import { ArrowUp, FileText, Mail } from "lucide-react";
 import { profile } from "@/content/profile";
-import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons/brands";
+import { GithubIcon, LinkedinIcon } from "@/components/icons/brands";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { LocalTime } from "@/components/ui/LocalTime";
@@ -8,7 +8,6 @@ import { LocalTime } from "@/components/ui/LocalTime";
 const links = [
   { label: "GitHub", href: profile.socials.github, Icon: GithubIcon },
   { label: "LinkedIn", href: profile.socials.linkedin, Icon: LinkedinIcon },
-  { label: "X", href: profile.socials.x, Icon: XIcon },
   { label: "Email", href: `mailto:${profile.email}`, Icon: Mail },
   { label: "Resume", href: profile.resume, Icon: FileText },
 ];

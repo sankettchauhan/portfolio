@@ -7,6 +7,7 @@ export const now = {
       value: "A stock recommendation system",
       href: "https://stocks-v3.streamlit.app/",
     },
+    { label: "learning", value: "Agentic AI systems" },
     { label: "reading", value: "Rich Dad Poor Dad" },
   ],
 };
