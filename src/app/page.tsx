@@ -49,7 +49,7 @@ export default async function Home() {
       title: "Things I've built",
       description: "Side projects from over the years. Work projects at Amazon are internal, so they live in the experience section.",
       action: <ViewAll href="/projects" label="all projects" />,
-      children: <ProjectGrid items={projects.filter((p) => p.featured).slice(0, 4)} />,
+      children: <ProjectGrid items={projects.filter((p) => p.featured)} />,
     },
     {
       id: "arcade",

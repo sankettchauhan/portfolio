@@ -1,6 +1,7 @@
 /**
- * Personal projects. `featured: true` puts a project on the homepage (keep it
- * to 4); everything shows on /projects with tag filters.
+ * Personal projects. `featured: true` puts a project on the homepage;
+ * everything shows on /projects with tag filters. Order here is display
+ * order — the featured ones lead with the most senior/current work first.
  */
 export type ProjectItem = {
   slug: string;
@@ -14,6 +15,16 @@ export type ProjectItem = {
 };
 
 export const projects: ProjectItem[] = [
+  {
+    slug: "stock-screener",
+    title: "Stock Screener & Strategy Lab",
+    description:
+      "A deterministic scoring engine that ranks Indian (NSE) stocks across seven weighted pillars — momentum, quality, valuation and more — then backtests strategies with error bars and in-sample warnings, not just a single number.",
+    image: "/assets/images/project/stock-screener.webp",
+    tags: ["Python", "Streamlit", "pandas"],
+    live: "https://stocks-v3.streamlit.app/",
+    featured: true,
+  },
   {
     slug: "memories",
     title: "Memories",
