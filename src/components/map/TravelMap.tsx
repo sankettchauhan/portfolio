@@ -28,7 +28,7 @@ const countries = feature(
  * than MIN_STEP to the previous one. Server components are serialized twice
  * (HTML + RSC payload), so every byte here counts double.
  */
-const MIN_STEP = 1.5;
+const MIN_STEP = 4;
 function compact(d: string | null) {
   if (!d) return "";
   // Each subpath is "x,yLx,y…" optionally ending in "Z"; drop specks entirely.
