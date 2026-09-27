@@ -19,7 +19,7 @@
   --border-strong: #2a3d31;
   --fg: #d6e6da;
   --muted: #8aa393;
-  --subtle: #5b7263;
+  --subtle: #6c8775;
   --accent: #4ef08a;
   --accent-strong: #7dffae;
   --accent-fg: #03140a;
@@ -37,7 +37,7 @@
   --border-strong: #bccab8;
   --fg: #0e1a12;
   --muted: #4a5e50;
-  --subtle: #7a8c7e;
+  --subtle: #657569;
   --accent: #127a3a;
   --accent-strong: #0b5c2a;
   --accent-fg: #ffffff;
@@ -56,7 +56,7 @@
   --border-strong: #3d321e;
   --fg: #efe3cc;
   --muted: #a8977a;
-  --subtle: #76684f;
+  --subtle: #907f60;
   --accent: #ffb23f;
   --accent-strong: #ffc86e;
   --accent-fg: #1a0f00;
@@ -74,7 +74,7 @@
   --border-strong: #d1c2a8;
   --fg: #1f170b;
   --muted: #65563d;
-  --subtle: #938369;
+  --subtle: #7e705a;
   --accent: #a95800;
   --accent-strong: #854400;
   --accent-fg: #ffffff;
@@ -93,7 +93,7 @@
   --border-strong: #372f4b;
   --fg: #e6e0f1;
   --muted: #9d93b3;
-  --subtle: #6d6484;
+  --subtle: #857c9c;
   --accent: #b884ff;
   --accent-strong: #cfa8ff;
   --accent-fg: #14061f;
@@ -111,7 +111,7 @@
   --border-strong: #c9bfdc;
   --fg: #19132a;
   --muted: #564b6e;
-  --subtle: #857b99;
+  --subtle: #786d8d;
   --accent: #6d28d9;
   --accent-strong: #5419b4;
   --accent-fg: #ffffff;
@@ -387,14 +387,16 @@ body {
   min-height: 0;
 }
 
-/* ---------- Scroll reveal (progressive: no support = no animation) ---------- */
+/* ---------- Scroll reveal (progressive: no support = no animation) ----------
+ * Animates transform only, never opacity: a scroll-linked animation can be
+ * sampled by a crawler, a screenshot, or a visitor mid-scroll at any point
+ * along its range, and text caught at partial opacity is real, measurable
+ * low contrast, not just a testing artifact. */
 @keyframes reveal {
   from {
-    opacity: 0;
     transform: translateY(14px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }

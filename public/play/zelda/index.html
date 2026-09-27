@@ -15,6 +15,15 @@
 	<script src="script.js">
 
 	</script>
+
+	<script>
+		// Portfolio embed only: once keyboard focus is on the canvas, Escape
+		// hands it back to the page around this iframe (a no-op if this page
+		// is ever opened on its own, outside the portfolio).
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') window.parent.postMessage({ type: 'exit-game' }, '*');
+		});
+	</script>
 </body>
 
 </html>

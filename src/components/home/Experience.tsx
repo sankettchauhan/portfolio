@@ -1,25 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 import { ChevronDown, GraduationCap } from "lucide-react";
 import type { Company, Education } from "@/content/experience";
 
 type Tab = "work" | "education";
+const TABS: Tab[] = ["work", "education"];
 
 export function Experience({ work, education }: { work: Company[]; education: Education[] }) {
   const [tab, setTab] = useState<Tab>("work");
   const [open, setOpen] = useState<string | null>(work[0]?.company ?? null);
+  const tabRefs = useRef<Record<Tab, HTMLButtonElement | null>>({ work: null, education: null });
+
+  // WAI-ARIA tabs pattern: only the selected tab sits in the normal Tab
+  // order (roving tabindex) — Tab from the tablist should move to the panel
+  // below, not to the other tab button; arrow keys move between tabs instead.
+  const moveTab = (dir: 1 | -1) => {
+    const i = TABS.indexOf(tab);
+    const next = TABS[(i + dir + TABS.length) % TABS.length];
+    setTab(next);
+    tabRefs.current[next]?.focus();
+  };
 
   return (
     <div className="reveal">
-      <div role="tablist" aria-label="Experience type" className="mb-5 inline-grid grid-cols-2 gap-1 rounded-xl border border-border bg-surface p-1">
-        {(["work", "education"] as const).map((t) => (
+      <div
+        role="tablist"
+        aria-label="Experience type"
+        className="mb-5 inline-grid grid-cols-2 gap-1 rounded-xl border border-border bg-surface p-1"
+        onKeyDown={(e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); moveTab(1); }
+          else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); moveTab(-1); }
+          else if (e.key === "Home") { e.preventDefault(); setTab(TABS[0]); tabRefs.current[TABS[0]]?.focus(); }
+          else if (e.key === "End") { e.preventDefault(); setTab(TABS[TABS.length - 1]); tabRefs.current[TABS[TABS.length - 1]]?.focus(); }
+        }}
+      >
+        {TABS.map((t) => (
           <button
             key={t}
+            ref={(el) => { tabRefs.current[t] = el; }}
             role="tab"
             id={`tab-${t}`}
+            tabIndex={tab === t ? 0 : -1}
             aria-selected={tab === t}
             aria-controls={`panel-${t}`}
             onClick={() => setTab(t)}
@@ -34,41 +58,49 @@ export function Experience({ work, education }: { work: Company[]; education: Ed
       </div>
 
       {tab === "work" ? (
-        <ul id="panel-work" role="tabpanel" aria-labelledby="tab-work" className="space-y-3">
-          {work.map((c) => (
-            <li key={c.company}>
-              <CompanyCard
-                company={c}
-                open={open === c.company}
-                onToggle={() => setOpen(open === c.company ? null : c.company)}
-              />
-            </li>
-          ))}
-        </ul>
+        // role="tabpanel" goes on this div, not the <ul>: a list's items need
+        // a parent exposed with the "list" role, which an explicit role
+        // overrides. Put ARIA-role elements and semantic lists in different
+        // elements rather than stacking roles on one.
+        <div id="panel-work" role="tabpanel" aria-labelledby="tab-work">
+          <ul className="space-y-3">
+            {work.map((c) => (
+              <li key={c.company}>
+                <CompanyCard
+                  company={c}
+                  open={open === c.company}
+                  onToggle={() => setOpen(open === c.company ? null : c.company)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : (
-        <ul id="panel-education" role="tabpanel" aria-labelledby="tab-education" className="space-y-3">
-          {education.map((e) => (
-            <li key={e.school} className="card flex gap-4 p-4 sm:p-5">
-              <Logo name={e.school} src={e.logo} fallback={<GraduationCap className="size-5" />} />
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-                  <h3 className="font-semibold text-fg">{e.school}</h3>
-                  <span className="shrink-0 font-mono text-xs text-subtle">
-                    {e.start} – {e.end}
-                  </span>
+        <div id="panel-education" role="tabpanel" aria-labelledby="tab-education">
+          <ul className="space-y-3">
+            {education.map((e) => (
+              <li key={e.school} className="card flex gap-4 p-4 sm:p-5">
+                <Logo name={e.school} src={e.logo} fallback={<GraduationCap className="size-5" />} />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+                    <h3 className="font-semibold text-fg">{e.school}</h3>
+                    <span className="shrink-0 font-mono text-xs text-subtle">
+                      {e.start} – {e.end}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted">{e.degree}</p>
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {e.details.map((d) => (
+                      <li key={d} className="chip">
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-sm text-muted">{e.degree}</p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {e.details.map((d) => (
-                    <li key={d} className="chip">
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

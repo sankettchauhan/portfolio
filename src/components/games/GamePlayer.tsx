@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Maximize, Monitor, RotateCcw } from "lucide-react";
 import type { Game } from "@/content/games";
 
@@ -14,8 +14,24 @@ export function GamePlayer({ game }: { game: Game }) {
   const [run, setRun] = useState(0);
   const frameRef = useRef<HTMLIFrameElement>(null);
   const screenRef = useRef<HTMLDivElement>(null);
+  const exitFocusRef = useRef<HTMLButtonElement>(null);
 
   const focusGame = () => frameRef.current?.contentWindow?.focus();
+
+  // Once focus is on the game's <canvas>, Tab alone isn't a reliable way out
+  // for a keyboard user (browsers vary in whether focus traverses back out
+  // of an iframe when it has nothing else to tab to). Each game's own script
+  // listens for Escape and posts back here so we can hand focus to a real
+  // button on the page — a guaranteed exit regardless of that browser quirk.
+  useEffect(() => {
+    const onMessage = (e: MessageEvent) => {
+      if (e.data?.type === "exit-game" && e.source === frameRef.current?.contentWindow) {
+        exitFocusRef.current?.focus();
+      }
+    };
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   return (
     <div>
@@ -63,12 +79,13 @@ export function GamePlayer({ game }: { game: Game }) {
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
         <p className="font-mono text-xs text-subtle">
-          {started ? "click the screen if keys stop responding" : `${game.engine} · runs in your browser`}
+          {started ? "click the screen if keys stop responding · Escape returns focus here" : `${game.engine} · runs in your browser`}
         </p>
         {started && (
           <div className="flex gap-2">
             <button
               type="button"
+              ref={exitFocusRef}
               onClick={() => setRun((r) => r + 1)}
               className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 font-mono text-xs text-muted transition-colors hover:border-accent/60 hover:text-accent"
             >

@@ -42,10 +42,14 @@ export function StaticMap({
 
   return (
     <div role="img" aria-label={label} className={`relative overflow-hidden bg-surface-2 ${className ?? ""}`}>
+      {/* This map only ever appears in the "currently based in" bento tile,
+          near the top of the homepage — eager-loaded since it's practically
+          always in or near the initial viewport, unlike a typical <img> lower
+          on the page. */}
       {/* eslint-disable-next-line @next/next/no-img-element -- fixed-size decorative raster */}
-      <img alt="" src={`/maps/${map}-dark.webp`} loading="lazy" className="map-tile-dark absolute left-1/2 top-1/2 max-w-none" style={imgStyle} />
+      <img alt="" src={`/maps/${map}-dark.webp`} loading="eager" className="map-tile-dark absolute left-1/2 top-1/2 max-w-none" style={imgStyle} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img alt="" src={`/maps/${map}-light.webp`} loading="lazy" className="map-tile-light absolute left-1/2 top-1/2 max-w-none" style={imgStyle} />
+      <img alt="" src={`/maps/${map}-light.webp`} loading="eager" className="map-tile-light absolute left-1/2 top-1/2 max-w-none" style={imgStyle} />
 
       <div aria-hidden className="map-tint pointer-events-none absolute inset-0" />
       <div
