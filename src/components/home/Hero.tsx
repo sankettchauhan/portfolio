@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import { profile } from "@/content/profile";
 import { Container } from "@/components/layout/Container";
+import { AvatarSprite } from "@/components/ui/AvatarSprite";
 
 export function Hero() {
   return (
@@ -40,15 +40,8 @@ export function Hero() {
         </div>
 
         <div className="order-first sm:order-none">
-          <div className="tint-media relative size-24 overflow-hidden rounded-2xl border border-border-strong sm:size-52 lg:size-60">
-            <Image
-              src={profile.photo}
-              alt={`Photo of ${profile.name}`}
-              fill
-              priority
-              sizes="(min-width: 1024px) 240px, (min-width: 640px) 208px, 96px"
-              className="object-cover"
-            />
+          <div className="size-24 overflow-hidden rounded-2xl border border-border-strong bg-surface-2 p-2 sm:size-52 sm:p-5 lg:size-60 lg:p-6">
+            <AvatarSprite className="size-full" />
           </div>
         </div>
       </div>

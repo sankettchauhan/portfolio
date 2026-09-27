@@ -49,7 +49,15 @@ export function Bento() {
             {now.items.map((item) => (
               <div key={item.label} className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
                 <dt className="w-20 shrink-0 font-mono text-xs text-accent">{item.label}</dt>
-                <dd className="text-sm text-fg">{item.value}</dd>
+                <dd className="text-sm text-fg">
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-accent">
+                      {item.value}
+                    </a>
+                  ) : (
+                    item.value
+                  )}
+                </dd>
               </div>
             ))}
           </dl>

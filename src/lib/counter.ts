@@ -11,8 +11,14 @@ import "server-only";
  * Without credentials: an in-memory counter in development (so the tile is
  * demoable, resets on restart); disabled in production (the UI then hides
  * the global total instead of showing a fake number).
+ *
+ * Key is namespaced by deploy environment so local dev, Vercel preview
+ * deploys and testing never add to the real production total. Only
+ * VERCEL_ENV === "production" (the live site) writes to the bare key.
  */
-const KEY = "portfolio:clicks";
+const envSuffix =
+  process.env.VERCEL_ENV === "production" ? "" : `:${process.env.VERCEL_ENV ?? "dev"}`;
+const KEY = `portfolio:clicks${envSuffix}`;
 
 const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
 const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;

@@ -15,7 +15,8 @@ export const games: Game[] = [
     slug: "mario",
     title: "Mario",
     tagline: "2-level platformer",
-    description: "[How you built it and what you learned: level maps as ASCII grids, power-ups, pipe transitions.]",
+    description:
+      "Levels are arrays of ASCII strings — each character maps to a sprite and a tag (solid, dangerous, coin-surprise). Headbumping a question block spawns a coin or a mushroom that doubles Mario's size and jump for 6 seconds, and pressing ↓ on a pipe loads the next level.",
     thumbnail: "/assets/images/project/mario.webp",
     engine: "Kaboom.js",
     controls: [
@@ -29,7 +30,8 @@ export const games: Game[] = [
     slug: "zelda",
     title: "Zelda",
     tagline: "Top-down dungeon crawler",
-    description: "[How you built it and what you learned: enemies with simple AI, room transitions, scoring.]",
+    description:
+      "Rooms are ASCII grids too. Slicers bounce off walls, and skeletors patrol on a randomized timer. Space fires a directional \"kaboom\" one tile ahead — a kill shakes the camera and adds to the score, and stairs or a door load the next room.",
     thumbnail: "/assets/images/project/zelda.webp",
     engine: "Kaboom.js",
     controls: [

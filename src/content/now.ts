@@ -1,9 +1,12 @@
 /** The "Currently" bento tile. Update whenever it changes; it's what makes the site feel alive. */
 export const now = {
-  updated: "[Sep 2026]",
+  updated: "Sep 2026",
   items: [
-    { label: "building", value: "[what you're building at work or on the side]" },
-    { label: "learning", value: "[a tech or skill you're picking up]" },
-    { label: "reading", value: "[a book, paper or blog]" },
+    {
+      label: "building",
+      value: "A stock recommendation system",
+      href: "https://stocks-v3.streamlit.app/",
+    },
+    { label: "reading", value: "Rich Dad Poor Dad" },
   ],
 };

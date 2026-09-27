@@ -51,7 +51,7 @@ function compact(d: string | null) {
 
 type Layout = {
   shapes: { name: string; d: string; visited: boolean }[];
-  pins: { name: string; x: number; y: number }[];
+  pins: { name: string; x: number; y: number; showLabel: boolean }[];
 };
 
 // Projecting ~240 country outlines is the slowest part of the homepage render,
@@ -96,7 +96,7 @@ function computeLayout(places: Place[]): Layout {
       .map(({ name, d, feature: f }) => ({ name, d, visited: places.some((p) => geoContains(f, [p.lng, p.lat])) })),
     pins: places.map((p) => {
       const [x, y] = projection([p.lng, p.lat])!;
-      return { name: p.name, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
+      return { name: p.name, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10, showLabel: p.label !== false };
     }),
   };
   layoutCache.set(key, layout);
@@ -124,15 +124,21 @@ export function TravelMap({ places, className }: { places: Place[]; className?: 
           strokeLinejoin="round"
         />
       ))}
-      {pins.map((p) => (
-        <g key={p.name} transform={`translate(${p.x} ${p.y})`}>
-          <circle r="9" fill="var(--accent)" opacity="0.18" />
-          <circle r="4.5" fill="var(--accent)" stroke="var(--bg)" strokeWidth="2" />
-          <text x="10" y="4" fontSize="13" fontFamily="var(--font-mono)" fill="var(--fg)" paintOrder="stroke" stroke="var(--surface)" strokeWidth="4">
-            {p.name}
-          </text>
-        </g>
-      ))}
+      {pins.map((p) =>
+        p.showLabel ? (
+          <g key={p.name} transform={`translate(${p.x} ${p.y})`}>
+            <circle r="9" fill="var(--accent)" opacity="0.18" />
+            <circle r="4.5" fill="var(--accent)" stroke="var(--bg)" strokeWidth="2" />
+            <text x="10" y="4" fontSize="13" fontFamily="var(--font-mono)" fill="var(--fg)" paintOrder="stroke" stroke="var(--surface)" strokeWidth="4">
+              {p.name}
+            </text>
+          </g>
+        ) : (
+          // Unlabeled dot (e.g. an Indian state) — smaller and quieter than a
+          // country pin, since ten of these sit close together.
+          <circle key={p.name} cx={p.x} cy={p.y} r="3" fill="var(--accent)" stroke="var(--bg)" strokeWidth="1.5" opacity="0.85" />
+        ),
+      )}
     </svg>
   );
 }

@@ -9,6 +9,8 @@ import { TravelMap } from "@/components/map/TravelMap";
  *                  [ ps5  ·  2  ][ anime  ·  2 ]
  */
 export function OffTheClock() {
+  const countriesVisited = travel.places.filter((p) => p.label !== false).length;
+  const statesVisited = travel.places.filter((p) => p.label === false).length;
   return (
     <div className="reveal grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       <div className="card flex flex-col overflow-hidden sm:col-span-2 lg:row-span-2">
@@ -25,8 +27,8 @@ export function OffTheClock() {
           <span className="absolute bottom-1 right-1.5 font-mono text-[9px] text-subtle">Natural Earth</span>
         </div>
         <dl className="grid grid-cols-3 divide-x divide-border font-mono text-xs">
-          <Stat label="places" value={String(travel.places.length)} />
-          <Stat label="last" value={travel.lastTrip} />
+          <Stat label="countries" value={String(countriesVisited)} />
+          <Stat label="states" value={String(statesVisited)} />
           <Stat label="next" value={travel.nextTrip} />
         </dl>
       </div>
