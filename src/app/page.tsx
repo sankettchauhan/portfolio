@@ -4,7 +4,7 @@ import { work, education } from "@/content/experience";
 import { projects } from "@/content/projects";
 import { games } from "@/content/games";
 import { certifications } from "@/content/certifications";
-import { visiblePosts, writingEnabled } from "@/content/posts";
+import { getAllPosts, MIN_POSTS } from "@/lib/posts";
 import { Section } from "@/components/layout/Section";
 import { Hero } from "@/components/home/Hero";
 import { Bento } from "@/components/home/Bento";
@@ -14,7 +14,7 @@ import { ProjectGrid } from "@/components/home/Projects";
 import { Arcade } from "@/components/home/Arcade";
 import { Certifications } from "@/components/home/Certifications";
 import { OffTheClock } from "@/components/home/OffTheClock";
-import { Writing } from "@/components/home/Writing";
+import { PostList } from "@/components/home/Writing";
 import { Contact } from "@/components/home/Contact";
 
 function ViewAll({ href, label }: { href: string; label: string }) {
@@ -28,7 +28,8 @@ function ViewAll({ href, label }: { href: string; label: string }) {
 
 type SectionDef = Omit<React.ComponentProps<typeof Section>, "index">;
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllPosts();
   const sections: (SectionDef | false)[] = [
     {
       id: "experience",
@@ -70,12 +71,12 @@ export default function Home() {
       title: "When I'm not coding",
       children: <OffTheClock />,
     },
-    writingEnabled() && {
+    posts.length >= MIN_POSTS && {
       id: "writing",
       eyebrow: "writing",
       title: "Notes & write-ups",
       action: <ViewAll href="/blog" label="all posts" />,
-      children: <Writing posts={visiblePosts()} />,
+      children: <PostList posts={posts.slice(0, 3)} />,
     },
     {
       id: "contact",

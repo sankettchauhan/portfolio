@@ -49,7 +49,20 @@ function compact(d: string | null) {
     .join("");
 }
 
-export function TravelMap({ places, className }: { places: Place[]; className?: string }) {
+type Layout = {
+  shapes: { name: string; d: string; visited: boolean }[];
+  pins: { name: string; x: number; y: number }[];
+};
+
+// Projecting ~240 country outlines is the slowest part of the homepage render,
+// so memoize per pin set (module-level: survives across requests in dev too).
+const layoutCache = new Map<string, Layout>();
+
+function computeLayout(places: Place[]): Layout {
+  const key = JSON.stringify(places);
+  const cached = layoutCache.get(key);
+  if (cached) return cached;
+
   const pins: Feature<MultiPoint> = {
     type: "Feature",
     properties: {},
@@ -64,12 +77,10 @@ export function TravelMap({ places, className }: { places: Place[]; className?: 
     pins,
   );
   projection.scale(Math.min(projection.scale(), 1400));
-  const [cx, cy] = projection(
-    [
-      (Math.min(...places.map((p) => p.lng)) + Math.max(...places.map((p) => p.lng))) / 2,
-      (Math.min(...places.map((p) => p.lat)) + Math.max(...places.map((p) => p.lat))) / 2,
-    ],
-  )!;
+  const [cx, cy] = projection([
+    (Math.min(...places.map((p) => p.lng)) + Math.max(...places.map((p) => p.lng))) / 2,
+    (Math.min(...places.map((p) => p.lat)) + Math.max(...places.map((p) => p.lat))) / 2,
+  ])!;
   projection.translate([projection.translate()[0] + W / 2 - cx, projection.translate()[1] + H / 2 - cy]);
   projection.clipExtent([
     [-10, -10],
@@ -77,13 +88,23 @@ export function TravelMap({ places, className }: { places: Place[]; className?: 
   ]);
   const path = geoPath(projection);
 
-  const shapes = countries.features
-    .map((f) => ({
-      name: f.properties.name,
-      d: compact(path(f)),
-      visited: places.some((p) => geoContains(f, [p.lng, p.lat])),
-    }))
-    .filter((s) => s.d);
+  const layout: Layout = {
+    shapes: countries.features
+      .map((f) => ({ name: f.properties.name, d: compact(path(f)), feature: f }))
+      .filter((s) => s.d)
+      // Point-in-polygon only for the handful of countries actually on screen.
+      .map(({ name, d, feature: f }) => ({ name, d, visited: places.some((p) => geoContains(f, [p.lng, p.lat])) })),
+    pins: places.map((p) => {
+      const [x, y] = projection([p.lng, p.lat])!;
+      return { name: p.name, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
+    }),
+  };
+  layoutCache.set(key, layout);
+  return layout;
+}
+
+export function TravelMap({ places, className }: { places: Place[]; className?: string }) {
+  const { shapes, pins } = computeLayout(places);
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden className={className}>
@@ -103,18 +124,15 @@ export function TravelMap({ places, className }: { places: Place[]; className?: 
           strokeLinejoin="round"
         />
       ))}
-      {places.map((p) => {
-        const [x, y] = projection([p.lng, p.lat])!;
-        return (
-          <g key={p.name} transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`}>
-            <circle r="9" fill="var(--accent)" opacity="0.18" />
-            <circle r="4.5" fill="var(--accent)" stroke="var(--bg)" strokeWidth="2" />
-            <text x="10" y="4" fontSize="13" fontFamily="var(--font-mono)" fill="var(--fg)" paintOrder="stroke" stroke="var(--surface)" strokeWidth="4">
-              {p.name}
-            </text>
-          </g>
-        );
-      })}
+      {pins.map((p) => (
+        <g key={p.name} transform={`translate(${p.x} ${p.y})`}>
+          <circle r="9" fill="var(--accent)" opacity="0.18" />
+          <circle r="4.5" fill="var(--accent)" stroke="var(--bg)" strokeWidth="2" />
+          <text x="10" y="4" fontSize="13" fontFamily="var(--font-mono)" fill="var(--fg)" paintOrder="stroke" stroke="var(--surface)" strokeWidth="4">
+            {p.name}
+          </text>
+        </g>
+      ))}
     </svg>
   );
 }

@@ -1,0 +1,42 @@
+export const meta = {
+  title: "How I built a Zelda clone in Kaboom.js",
+  summary: "[Level maps as ASCII grids, simple enemy AI, and what I'd do differently today.]",
+  date: "2026-10-01",
+  draft: true,
+  tags: ["games", "javascript"],
+};
+
+> **Draft template.** Replace everything below with your own words. Keep the
+> structure if it helps: why → how → what went wrong → what you learned.
+
+[Opening: one or two sentences on why you built this, and where to play it: [play Zelda](/games/zelda).]
+
+## The level is just a string
+
+[Explain how Kaboom turns an ASCII grid into a room. A short snippet helps:]
+
+```js
+const map = [
+  "ycc)cc^ccw",
+  "a        b",
+  "a      * b",
+  "xdd)dd)ddz",
+];
+
+addLevel(map, {
+  width: 48,
+  height: 48,
+  a: [sprite("left-wall"), solid(), "wall"],
+  "*": [sprite("slicer"), "dangerous", { dir: -1 }],
+});
+```
+
+## Enemies that feel alive
+
+[Slicers bounce between walls; skeletors change direction on a random timer. Why that's enough.]
+
+## What I'd do differently
+
+- [Point one]
+- [Point two]
+- [Point three]

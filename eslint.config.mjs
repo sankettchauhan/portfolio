@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored, standalone game builds (third-party / legacy code).
+    "public/play/**",
   ]),
 ]);
 

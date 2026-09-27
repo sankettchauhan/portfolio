@@ -4,7 +4,7 @@ import { profile } from "@/content/profile";
 import { DEFAULT_MODE, DEFAULT_THEME, themeInitScript } from "@/lib/theme";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
-import { writingEnabled } from "@/content/posts";
+import { writingEnabled } from "@/lib/posts";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -54,7 +54,7 @@ export const viewport: Viewport = {
   colorScheme: "dark light",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <Nav showWriting={writingEnabled()} />
+        <Nav showWriting={await writingEnabled()} />
         <main id="main" className="flex-1">
           {children}
         </main>
