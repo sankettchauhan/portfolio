@@ -17,7 +17,7 @@ export const profile = {
   location,
   email: "sanket.chauhan4@gmail.com",
   resume: "/resume.pdf",
-  siteUrl: "https://sanketchauhan.me",
+  siteUrl: "https://www.sanketchauhan.in",
   photo: "/assets/images/sanket.jpg",
   socials: {
     github: "https://github.com/sankettchauhan",
